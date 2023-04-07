@@ -12,5 +12,10 @@
     ```project(formatter)```    
     ```add_library(formatter STATIC formatter.cpp)```    
     ```target_include_directories(formatter PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})```   
+**4. Аналогично создадим файлы .h / .cpp**   
+**5. Проверим работоспособность CMake**  
+    ```$ cmake -H. -B_build  
+       $ cmake --build _build```  
+       
     
       
