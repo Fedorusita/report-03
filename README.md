@@ -14,8 +14,8 @@
     ```target_include_directories(formatter PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})```   
 **4. Аналогично создадим файлы .h / .cpp**   
 **5. Проверим работоспособность CMake**  
-    ```$ cmake -H. -B_build  
-       $ cmake --build _build```  
+    ```$ cmake -H. -B_build```   
+    ```$ cmake --build _build```  
 ******
 
 **1. Выполним схожие команды, только другое содержание CMake**  
@@ -70,7 +70,23 @@ target_link_libraries(example solver_lib formatter_ex)
 
 ******
 
-**1.
+**1.CMake hello_world_application**  
+cmake_minimum_required(VERSION 3.4)  
+
+set(CMAKE_CXX_STANDARD 11)  
+set(CMAKE_CXX_STANDARD_REQUIRED ON)  
+
+project(hello_world_example)  
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib ${CMAKE_CURRENT_BINARY_DIR}/formatter_ex)  
+add_executable(example hello_world.cpp)  
+
+target_link_libraries(example formatter_ex)  
+
+**2.Работа программы**
+```$ cmake --build _build --target example```  
+```$ ./_build/example```  
+
 
   
 
