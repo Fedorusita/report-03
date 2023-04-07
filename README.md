@@ -18,7 +18,7 @@
        $ cmake --build _build```  
 ******
 
-**1. Выполним схожие команды, только другое содержание CMake**
+**1. Выполним схожие команды, только другое содержание CMake**  
      cmake_minimum_required(VERSION 3.4)  
 
 set(CMAKE_CXX_STANDARD 11)  
