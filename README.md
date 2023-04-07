@@ -16,7 +16,21 @@
 **5. Проверим работоспособность CMake**  
     ```$ cmake -H. -B_build  
        $ cmake --build _build```  
-       
-    (https://user-images.githubusercontent.com/112895410/230633673-b757dfa8-aee0-4bda-be96-855720a19320.png)
+******
+
+**1. Выполним схожие команды, только другое содержание CMake**
+     cmake_minimum_required(VERSION 3.4)  
+
+set(CMAKE_CXX_STANDARD 11)  
+set(CMAKE_CXX_STANDARD_REQUIRED ON)  
+
+project(formatter_ex)  
+
+add_library(formatter_ex STATIC formatter_ex.cpp)  
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib ${CMAKE_CURRENT_BINARY_DIR}/formatter) 
+target_include_directories(formatter_ex PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})  
+
+target_link_libraries(formatter_ex formatter)  
 
       
