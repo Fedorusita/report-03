@@ -17,6 +17,6 @@
     ```$ cmake -H. -B_build  
        $ cmake --build _build```  
        
-    !(https://user-images.githubusercontent.com/112895410/230633673-b757dfa8-aee0-4bda-be96-855720a19320.png)
+    (https://user-images.githubusercontent.com/112895410/230633673-b757dfa8-aee0-4bda-be96-855720a19320.png)
 
       
